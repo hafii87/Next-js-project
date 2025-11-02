@@ -15,9 +15,7 @@ const UsersPage = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await fetch('https://jsonplaceholder.typicode.com/users', {
-          cache: 'no-store',
-        });
+        const res = await fetch('https://jsonplaceholder.typicode.com/users');
         const data: User[] = await res.json();
         setUsers(data);
       } catch (error) {
